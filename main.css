@@ -1,0 +1,344 @@
+/*---------------------------------------
+	SITE: UCBA eMedia Musings
+---------------------------------------*/
+
+
+/* GLOBAL SETTINGS
+---------------------------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f2f2f2;
+   height: 100vh;
+}
+	
+div.wrapper {
+   width: 960px;
+   margin: 2rem auto 0 auto;
+   border: 2px solid #000000;
+   box-shadow: 5px 5px 10px#590313;
+   background-color: white;
+}
+
+img {
+   max-width: 100%;
+}
+
+
+/* HEADER
+---------------------------------------*/
+	
+header {
+   background: linear-gradient(#f2f2f2, #590313aa);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 25px 20px;
+}
+
+
+header div.sitename { /* ← contains both the h1 and h2 */
+
+}
+
+header h1 {
+   font-size: 45px ;
+   font-family: "Berkshire Swash";
+}
+
+header h1 a {
+   color: #590313;
+   text-decoration: none;
+}
+
+header h2 {
+   font-size: 30px;
+   color: #590313;
+}
+
+
+
+/* MAIN NAVIGATION 
+---------------------------------------*/	
+
+nav.topnav { /* ← entire navigation area */
+   background-color: #f2f2f2;
+   border-radius: 20px;
+}
+
+nav.topnav ul {
+	list-style-type: none;
+	display: flex;
+}
+
+nav.topnav li {
+
+}
+
+nav.topnav a {
+	padding: 1em 1em;
+	text-transform: uppercase;
+	display: block;
+	text-decoration: none;
+	color: #590313; /* ← you can change this */
+}
+
+nav.topnav a:hover {
+	background-color: ghostwhite; /* ← you can change this */
+	border-radius: 2em;
+}
+
+
+
+/* HOMEPAGE LAYOUT
+---------------------------------------*/	
+main.homepage {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-gap: 20px;
+}
+
+article.blog {
+   grid-column: 1/4;
+   grid-row: 1/3;
+   padding:1rem;
+}
+
+article.blog h2 { /* ← blog heading */
+   font-size: 30px;
+   border-bottom: solid #590313;
+   font-family: "Orelega One";
+}
+
+article.blog p { /* ← blog text */
+   font-size: 25px;
+   line-height: normal;
+}
+
+main.homepage aside { /* ← both asides */
+   padding-right: 1rem;
+}
+
+main.homepage aside.recent {
+   grid-column: 4/5;
+   grid-row: 1/2;
+}
+
+main.homepage aside.links {
+   grid-column: 4/5;
+   grid-row: 2/3;
+}
+
+main.homepage aside h3 { /* ← h3s in asides */
+   font-size: 20px;
+   border-bottom: solid #590313;
+   font-family: "Orelega One";
+}
+
+main.homepage aside ul { /* ← lists in the asides */
+   margin-top: 20px;
+}
+
+main.homepage aside li { /* ← items in the aside lists */
+   margin-left: 2rem;
+   margin-bottom: 20px;
+}
+
+main.homepage aside li a { /* ← links in the asides */
+   text-decoration: none;
+   color: black;
+}
+
+main.homepage aside li a:hover { 
+   transform: scale(1.3);
+   transition: ease 1s;
+}
+
+
+
+/* CAMPUS AREA
+---------------------------------------*/
+
+section.campus	{
+   grid-column: 1/5;
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-gap: 1rem;
+   margin: 1rem;
+}	
+
+section.campus section { /* ← all 6 of the building sections */
+   text-align: center;
+}
+
+section.campus h3 {
+   font-size: 20px;
+   font-family: "Orelega One";
+   margin-bottom: 15px;
+}
+
+section.campus figure {
+
+}
+
+section.campus img {
+	border: 5px solid ghostwhite; /* ← you can change this */
+	box-shadow: 2px 2px 5px #590313; /* ← you can change this */
+}
+
+section.campus figcaption {
+   font-size: 20px ;
+}
+
+
+
+/* FOOTER
+---------------------------------------*/
+
+footer {
+   background-color: #5903138a;
+   padding: .5rem 2rem .5rem 2rem;
+}
+
+footer a { 
+   text-decoration: none;
+}
+
+
+/* Don't add any media queries yet.
+   You will add them for the next part of this assignment */ 
+
+/* TABLET
+---------------------------------------*/
+
+@media (max-width: 768px){
+   div.wrapper{
+      width: 95%;
+   }
+   img{
+      max-width: 100%;
+   }
+   header{
+      text-align: center;
+      flex-direction: column;
+   }
+   nav.topnav{
+      background-color: #f2f2f2;
+      margin: 1em 0 ;
+   }
+   main.homepage{
+      grid-template-columns: 1fr 1fr ;
+   }
+   article.blog{
+      grid-column: 1/3;
+      grid-row: 1/2;
+   }
+   main.homepage aside.recent{
+      grid-column: 1/2;
+      grid-row: 2/3;
+      padding-left: 1em;
+   }
+   main.homepage aside.links{
+      grid-column: 2/3;
+      grid-row: 2/3;
+   }
+   section.campus{
+      grid-column: 1/3;
+      grid-row: 3/4;
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+   section.campus figure {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: .5em;
+      align-items: center;
+   }
+   section.campus figure img{
+      grid-column: 1/2;
+   }
+   section.campus figure figcaption{
+      grid-column: 2/4;
+   }
+   article.blog h2{
+      font-size: 28px;
+   }
+   article.blog p{
+      font-size: 23px;
+      line-height: 30px;
+   }
+   main.homepage aside h3{
+      font-size: 28px;
+   }
+   main.homepage aside li{
+      margin-bottom: 30px ;
+   }
+   main.homepage aside a{
+      font-size: 20px;
+      padding: 1em 0 ;
+   }
+   section.campus h3{
+      font-size: 26px;
+   }
+   section.campus figcaption{
+      font-size: 15px;
+      text-align: center;
+   }
+}
+
+
+/* PHONE
+---------------------------------------*/
+
+@media (max-width: 480px){
+   div.wrapper{
+      width: 100%;
+      margin: none;
+   }
+   header{
+      padding: 1rem;
+      margin: none;
+   }
+   nav.topnav{
+      width: 98%;
+      margin-bottom: .5em;
+   }
+   nav.topnav ul{
+      flex-direction: column;
+   }
+   nav.topnav li{
+      border-bottom: solid 1px #590313;
+   }
+   nav.topnav li:last-of-type{
+      border: none;
+   }
+   main.homepage{
+      grid-template-columns: 1fr;
+   }
+   article.blog{
+      grid-column: 1;
+      font-size: 10px;
+      line-height: 27px;
+   }
+   main.homepage aside{
+      display: none;
+   }
+   section.campus{
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+   }
+   section.campus h3{
+      font-size: 35px;
+   }
+   section.campus figure{
+      background-color: aliceblue;
+      padding-right: 20px;
+      border-radius: 10px;
+   }
+   section.campus figcaption{
+      font-size: 27px;
+      line-height: 29px;
+   }
+}
